@@ -1,0 +1,20 @@
+{
+  "playlistCollection": [
+    {
+      "id": "f787eafe-d80d-49a3-8a4e-16fd685b5e24",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Another playlist",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1584911713/sjrvxxgo3kh2z2wavemc.jpg",
+      "date": "2020-03-22T21:15:12.954Z",
+      "songs": [
+        {
+          "id": "a648483b-b1ea-4fb9-8a5d-63dc68a2b604",
+          "title": "sonata",
+          "artist": "beethoven",
+          "genre": "classical",
+          "duration": "10"
+        }
+      ]
+    }
+  ]
+}
