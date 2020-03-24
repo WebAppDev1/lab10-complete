@@ -34,27 +34,23 @@ app.engine(
       },
       formatDate: function(date) {
         let d = new Date(date);
+        let dayNum = d.getDay();
         let dateNum = d.getDate();
         let month = d.getMonth();
         let year = d.getFullYear();
 
-        let months = [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December"
-        ];
+        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        
         let monthname = months[month];
-        return monthname + " " + dateNum + ", " + year;
-      }
+        let dayname = days[dayNum];
+        
+        return dayname + " " + monthname + " " + dateNum + ", " + year;
+      },
+      capitalise: function(word) {
+        let capitalisedWord = word[0].toUpperCase() + word.slice(1);
+        return capitalisedWord;
+      },
     }
   })
 );
