@@ -1,5 +1,10 @@
 Lab 10
 =================
 
-- If and unless Handlebars helpers
-- Create custom helpers
+- Used if/unless built-in helpers
+- Added dates to playlists
+- Created custom helpers:
+  - uppercase
+  - formatDate
+  - capitalise
+
