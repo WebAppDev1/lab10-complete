@@ -9,7 +9,7 @@ function likeIt(){
 }
 
 function showHide() {
-  var readMoreDiv = document.getElementById("readmore");
+  let readMoreDiv = document.getElementById("readmore");
   readMoreDiv.style.color = "green";
   if (readMoreDiv.style.display === "block") {
     readMoreDiv.style.display = "none";
@@ -19,8 +19,8 @@ function showHide() {
 }
 
 function welcomeUser() {
-  var username = prompt("What's your name?");
-  var welcomeUserDiv = document.getElementById("welcomeuser");
+  let username = prompt("What's your name?");
+  let welcomeUserDiv = document.getElementById("welcomeuser");
   welcomeUserDiv.style.display = "block";
   document.getElementById('welcomeuser').innerHTML = '<p> Hello, ' + username + ', looking forward to hearing your playlists! Click this message to close it.</p>';
   welcomeUserDiv.style.cursor = "pointer";
