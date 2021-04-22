@@ -30,8 +30,11 @@
           </span>
         </td>
         <td class="field">
-          <span class="ui input">
-            <input placeholder="Genre" type="text" name="genre" required value = "{{capitalise genre}}">
+         <span class="ui input">
+          <select name="genre" id="genre" style="padding:.6em 2.5em; border:solid lightgray 1px;border-radius:5px;">
+            <option value="{{genre}}" selected="selected">{{genre}}</option>
+            {{{populate genre}}}       
+			    </select>       
           </span>
         </td>
         <td class="field">

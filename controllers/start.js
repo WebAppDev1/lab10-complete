@@ -28,6 +28,7 @@ const start = {
         totalPlaylists: numPlaylists,
         totalSongs: numSongs,
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        picture:loggedInUser.pictureexit
       };
 
       response.render('start', viewData);

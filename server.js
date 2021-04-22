@@ -28,9 +28,8 @@ app.engine(
     defaultLayout: "main",
 
     helpers: {
-      uppercase: function(word) {
-        let uppercaseWord = word.toUpperCase();
-        return uppercaseWord;
+      uppercase: (inputString) => {
+        return inputString.toUpperCase();
       },
       formatDate: function(date) {
         let d = new Date(date);
@@ -40,7 +39,7 @@ app.engine(
         let year = d.getFullYear();
 
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
         
         let monthname = months[month];
         let dayname = days[dayNum];
@@ -51,6 +50,15 @@ app.engine(
         let capitalisedWord = word[0].toUpperCase() + word.slice(1);
         return capitalisedWord;
       },
+      populate: function(genre) {
+       const genres = ["Classical", 'Rock', "Pop", "Disco", "Soul"]
+       genres.splice(genres.indexOf(genre), 1)
+       let options = ``
+       for (let item of genres) {
+         options+=`<option value ="${item}">${item}</option>`         
+       }    
+       return options      
+      }
     }
   })
 );

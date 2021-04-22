@@ -9,10 +9,42 @@
       "songs": [
         {
           "id": "c4f82a1b-2316-4d12-8c86-27d2a8889881",
-          "title": "Sonata no. 10",
-          "artist": "Beethoven",
-          "genre": "Classical",
-          "duration": "5"
+          "title": "sonata no. 10",
+          "artist": "beethoven",
+          "genre": "classical",
+          "duration": "6"
+        }
+      ]
+    },
+    {
+      "id": "715181d2-ad6e-420e-88f9-a730131e4f8a",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "New playlist",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1618842543/hpjex4ntdrsrxdnws3z2.jpg",
+      "date": "2021-04-19T14:29:03.393Z",
+      "songs": []
+    },
+    {
+      "id": "774e340f-0173-4726-b50e-d67d8df0893f",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "New playlist",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1618844102/h39g2uuvnunaqfb2a3hg.jpg",
+      "date": "2021-04-19T14:55:02.094Z",
+      "songs": []
+    },
+    {
+      "id": "f7e3154a-6447-4421-8cae-010a5ca40556",
+      "userid": "044ea85e-8849-46a0-ac40-1b5c36f0863b",
+      "title": "New Playlist",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1619086678/bw5tsdjuvh6m03bmwv2z.jpg",
+      "date": "2021-04-22T10:17:57.797Z",
+      "songs": [
+        {
+          "id": "5f06553f-5afc-43b3-a4bd-cbf8847910fd",
+          "title": "df",
+          "artist": "U2",
+          "genre": "Rock",
+          "duration": "4"
         }
       ]
     }

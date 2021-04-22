@@ -17,7 +17,8 @@ const dashboard = {
       const viewData = {
         title: "Playlist Dashboard",
         playlists: playlistStore.getUserPlaylists(loggedInUser.id),
-        fullname: loggedInUser.firstName + " " + loggedInUser.lastName
+        fullname: loggedInUser.firstName + " " + loggedInUser.lastName,
+        picture:loggedInUser.picture
       };
       logger.info("about to render" + viewData.playlists);
       response.render("dashboard", viewData);
