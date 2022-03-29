@@ -15,6 +15,7 @@ const playlist = {
         title: 'Playlist',
         playlist: playlistStore.getPlaylist(playlistId),
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        picture: loggedInUser.picture
       };
       response.render('playlist', viewData);
       }

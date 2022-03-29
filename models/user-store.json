@@ -5,14 +5,52 @@
       "lastName": "simpson",
       "email": "homer@simpson.com",
       "password": "secret",
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "picture":"https://res.cloudinary.com/web-app-dev-1/image/upload/v1647904758/jye9gz8lo8yvvaruawk0.jpg"
     },
     {
       "firstName": "marge",
       "lastName": "simpson",
       "email": "marge@simpson.com",
       "password": "secret",
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "picture":"https://res.cloudinary.com/web-app-dev-1/image/upload/v1616507454/marge.png"
+
+    },
+    {
+      "firstName": "Rosanne",
+      "lastName": "Birney",
+      "email": "rosanne@gmail.com",
+      "password": "secret",
+      "id": "5bdff439-13b3-4560-b362-7a4622de232f"
+    },
+    {
+      "firstName": "yooo",
+      "lastName": "saaaa",
+      "email": "yooo@gmail.com",
+      "password": "1234",
+      "id": "3ebea92e-afb1-44ae-8f94-6db0c11de3d0"
+    },
+    {
+      "firstName": "b",
+      "lastName": "m",
+      "email": "bm@wit.ie",
+      "password": "bm",
+      "id": "da57ed1a-a505-489b-bd60-4e79465b0f50"
+    },
+    {
+      "firstName": "h",
+      "lastName": "h",
+      "email": "jhgf@gmil.com",
+      "password": "yes",
+      "id": "98fed6f4-0983-4a6b-aa96-3969e5306504"
+    },
+    {
+      "firstName": "hgf",
+      "lastName": "gf",
+      "email": "hi@g.c",
+      "password": "yes",
+      "id": "826d4a8c-bb12-4cad-9c02-214513f9d3c4"
     }
   ]
 }

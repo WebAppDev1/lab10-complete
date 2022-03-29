@@ -1,18 +1,55 @@
 {
   "playlistCollection": [
     {
-      "id": "f787eafe-d80d-49a3-8a4e-16fd685b5e24",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "Another playlist",
-      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1584911713/sjrvxxgo3kh2z2wavemc.jpg",
-      "date": "2020-03-22T21:15:12.954Z",
+      "id": "375f507b-f4f6-4b0a-ae8e-57c841bf05fc",
+      "userid": "5bdff439-13b3-4560-b362-7a4622de232f",
+      "title": "Ada's songs",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1618220715/hdkua9hld0cwwyentrj0.jpg",
       "songs": [
         {
-          "id": "c4f82a1b-2316-4d12-8c86-27d2a8889881",
-          "title": "sonata no. 10",
-          "artist": "beethoven",
-          "genre": "classical",
-          "duration": "6"
+          "id": "5ac20d05-0c40-40e9-8388-a8deefdc74ca",
+          "title": "The Shrine / An Argument",
+          "artist": "Fleet Foxes",
+          "genre": "Folk",
+          "duration": "5"
+        }
+      ]
+    },
+    {
+      "id": "69cb6539-4039-48f2-86a4-aa0512d9650b",
+      "userid": "5bdff439-13b3-4560-b362-7a4622de232f",
+      "title": "Finnegan's faves",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1618223367/qp5x4zjk4yw17yxngd7y.jpg",
+      "songs": [
+        {
+          "id": "ff829f52-6b56-4032-8bb1-513f82d6c6fd",
+          "title": "Michael Finnegan",
+          "artist": "unknown",
+          "genre": "folk",
+          "duration": "3"
+        }
+      ]
+    },
+    {
+      "id": "989e824e-7f84-496a-b9c0-4877169c3795",
+      "userid": "5bdff439-13b3-4560-b362-7a4622de232f",
+      "title": "Rosanne's playlist",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1618237813/qlmraj5wimeg9weddwkv.jpg",
+      "songs": []
+    },
+    {
+      "id": "6f27d1de-8c5b-4c43-a190-ccd2e6be88fb",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "new Playlist",
+      "picture": "http://res.cloudinary.com/web-app-dev-1/image/upload/v1648553100/fs0pyamfeepg7oalrstu.jpg",
+      "date": "2022-03-29T11:25:00.276Z",
+      "songs": [
+        {
+          "id": "41fdb34b-283e-4ae1-9154-7d2d618a3fbf",
+          "title": "beautiful day",
+          "artist": "u2",
+          "genre": "Rock",
+          "duration": "3"
         }
       ]
     }

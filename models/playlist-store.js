@@ -2,6 +2,7 @@
 
 const _ = require('lodash');
 const JsonStore = require('./json-store');
+
 const cloudinary = require('cloudinary');
 const logger = require('../utils/logger');
 
