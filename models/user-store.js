@@ -1,4 +1,8 @@
 'use strict';
+
+const _ = require('lodash');
+const JsonStore = require('./json-store');
+
 const cloudinary = require('cloudinary');
 const logger = require('../utils/logger');
 
@@ -10,8 +14,6 @@ catch(e) {
   logger.info('You must provide a Cloudinary credentials file - see README.md');
   process.exit(1);
 }
-const _ = require('lodash');
-const JsonStore = require('./json-store');
 
 const userStore = {
 
@@ -22,16 +24,7 @@ const userStore = {
     return this.store.findAll(this.collection);
   },
 
-  addUser(user, response) {
-        user.picture.mv('tempimage', err => {
-        if (!err) {
-          cloudinary.uploader.upload('tempimage', result => {
-            console.log(result);
-            user.picture = result.url;
-            response();
-          });
-        }
-      });
+  addUser(user) {
     this.store.add(this.collection, user);
   },
 

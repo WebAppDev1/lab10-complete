@@ -35,18 +35,14 @@ const accounts = {
   register(request, response) {
     const user = request.body;
     user.id = uuid();
-    user.picture=request.files.picture,
-    userstore.addUser(user, function() {
-       logger.info('registering' + user.email);
-       response.cookie('playlist', user.email);
-       logger.info('logging in' + user.email);
-       response.redirect('/start');
-    });
+    userstore.addUser(user);
+    logger.info('registering' + user.email);
+    response.redirect('/');
   },
 
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
-    if ((user) && (user.password === request.body.password)) {
+    if (user) {
       response.cookie('playlist', user.email);
       logger.info('logging in' + user.email);
       response.redirect('/start');
