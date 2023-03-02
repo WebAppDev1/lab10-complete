@@ -1,12 +1,5 @@
 {
   "playlistCollection": [
-    {
-      "id": "2d8ef093-8dd2-4f03-b2de-c1c4a6b5d898",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "new Playlist",
-      "picture": "http://res.cloudinary.com/web-app-dev-1/image/upload/v1648479378/x3qxh79x9fac2fkvwths.jpg",
-      "date": "2022-03-28T14:56:18.195Z",
-      "songs": []
-    }
+
   ]
 }

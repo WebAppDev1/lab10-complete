@@ -1,12 +1,14 @@
 'use strict';
 
-const _ = require('lodash');
-const JsonStore = require('./json-store');
-const cloudinary = require('cloudinary');
-const logger = require('../utils/logger');
+import logger from '../utils/logger.js';
+import JsonStore from './json-store.js';
+import cloudinary from 'cloudinary';
+
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
 try {
-  const env = require('../.data/.env.json');
+  const env = require("../.data/.env.json");
   cloudinary.config(env.cloudinary);
 }
 catch(e) {
@@ -22,57 +24,56 @@ const playlistStore = {
   getAllPlaylists() {
     return this.store.findAll(this.collection);
   },
-
+  
   getPlaylist(id) {
-    return this.store.findOneBy(this.collection, { id: id });
+    return this.store.findOneBy(this.collection, (collection => collection.id === id));
   },
-
-  addPlaylist(playlist, response) {
-    playlist.picture.mv('tempimage', err => {
-        if (!err) {
-          cloudinary.uploader.upload('tempimage', result => {
-            console.log(result);
-            playlist.picture = result.url;
-            response();
-          });
-        }
-      });
-    this.store.add(this.collection, playlist);
+  
+  removeSong(id, songId) {
+    const arrayName = "songs";
+    this.store.removeItem(this.collection, id, arrayName, songId);
   },
-
+  
   removePlaylist(id) {
     const playlist = this.getPlaylist(id);
-    this.store.remove(this.collection, playlist);
+    this.store.removeCollection(this.collection, playlist);
   },
-
+  
   removeAllPlaylists() {
     this.store.removeAll(this.collection);
   },
-
-  addSong(id, song) {
-    const playlist = this.getPlaylist(id);
-    playlist.songs.push(song);
+  
+  async addPlaylist(playlist, response) {
+    function uploader(){ 
+      return new Promise(function(resolve, reject) {  
+        cloudinary.uploader.upload(playlist.picture.tempFilePath,function(result,err){
+          if(err){console.log(err);}
+          resolve(result);
+        });
+      });
+    } 
+    let result = await uploader();
+    logger.info('cloudinary result', result);
+    playlist.picture = result.url;
+      
+    this.store.addCollection(this.collection, playlist);
+    response();
   },
-
-  removeSong(id, songId) {
-    const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
-    _.remove(songs, { id: songId});
+  
+  addSong(id, song) {
+    const arrayName = "songs";
+    this.store.addItem(this.collection, id, arrayName, song);
   },
   
   editSong(id, songId, updatedSong) {
-    const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
-    const index = songs.findIndex(song => song.id === songId);
-    songs[index].title = updatedSong.title;
-    songs[index].artist = updatedSong.artist;
-    songs[index].genre = updatedSong.genre;
-    songs[index].duration = updatedSong.duration;
+    const arrayName = "songs";
+    this.store.editItem(this.collection, id, songId, arrayName, updatedSong);
   },
   
   getUserPlaylists(userid) {
-    return this.store.findBy(this.collection, { userid: userid });
+    return this.store.findBy(this.collection, (playlist => playlist.userid === userid));
   },
+
 };
 
-module.exports = playlistStore;
+export default playlistStore;
