@@ -1,14 +1,27 @@
-/* CSS files add styling rules to your content */
+/* a minimalist set of CSS resets */
 
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
   background-color: lightgrey;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
 }
 
 #readmore {
@@ -19,6 +32,22 @@ h1 {
   display: none;
 }
 
+.ui.menu .active.item {
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.95);
+  font-weight: normal;
+  box-shadow: none;
+}
+
+#tablestats {
+  margin-top:2em;
+}
+
+#tablestats .red,  #tablestats .blue  {
+  border:solid black 2px;
+  padding: 0em .5em;
+}
+
 .name{
   padding-top:20px;
   padding-right:5px;
@@ -26,3 +55,17 @@ h1 {
   font-weight:bold;
   text-transform:capitalize;
 }
+
+.profilepic{
+  padding-top:15px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+}
+
+
+
+
+
+
+

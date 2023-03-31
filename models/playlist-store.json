@@ -1,5 +1,33 @@
 {
   "playlistCollection": [
-
+    {
+      "id": "afd70b65-32cf-4e29-a814-191700ab76d3",
+      "title": "test",
+      "duration": "12",
+      "songs": []
+    },
+    {
+      "id": "5fba3053-c159-4259-b63a-24fcb22d9b45",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "title": "New Playlist",
+      "picture": "http://res.cloudinary.com/web-app-dev-1/image/upload/v1680098867/d1wgivcc3vxm21c4v7fx.jpg",
+      "date": "2023-03-29T14:07:47.215Z",
+      "songs": [
+        {
+          "id": "f7b1be08-dde3-4d22-871f-8085048fadc0",
+          "title": "Beautiful Day",
+          "artist": "U2",
+          "genre": "Rock",
+          "duration": "3.5"
+        },
+        {
+          "id": "2c6141f3-d3bb-4051-a54d-9845015126fa",
+          "title": "Bohemian Rhapsody",
+          "artist": "Queen",
+          "genre": "Rock",
+          "duration": "5"
+        }
+      ]
+    }
   ]
 }

@@ -21,48 +21,29 @@ app.use(fileUpload({
 }));
 
 // use handlebars as view engine
-const handlebars = exphbs.create({ 
-  extname: ".hbs",
-  helpers: {
-    uppercase: (inputString) => {
+const handlebars = exphbs.create({ extname: ".hbs" ,
+   helpers: {
+     
+      uppercase: (inputString) => {
         return inputString.toUpperCase();
-    },
-    formatDate: (date) =>  {
-      let dateCreated = new Date(date);
-      let dateNum = dateCreated.getDate();
-      let month = dateCreated.getMonth();
-      let year = dateCreated.getFullYear();
-
-      let months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ];
-      let monthname = months[month];
-      return `${monthname} ${dateNum}, ${year}`;
-    },
-    populate: (genre) => {
-      const genres = ["Classical", 'Rock', "Pop", "Disco", "Soul"]
-      genres.splice(genres.indexOf(genre), 1)
-      let options = ``
-      for (let item of genres) {
-          options+=`<option value ="${item}">${item}</option>`         
-      }    
-      return options      
-    }
+      },
+     
+      formatDate: (date) => {
+        let dateCreated = new Date(date);
+        let options = {year: "numeric", month: "long", day: "2-digit"};        
+        return `${dateCreated.toLocaleDateString("en-IE",options)}`;
+      },
+     
+      calcTotal: (arr) => {
+        let totDuration = 0;
+        arr.forEach(song => totDuration += parseFloat(song.duration))       
+        return totDuration
+      },
   }
 });
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
+
 
 // import routes file and use this for routing
 import routes from "./routes.js";
