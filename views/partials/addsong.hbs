@@ -1,28 +1,23 @@
 <form class="ui stacked segment form" action="/playlist/{{playlist.id}}/addsong" method="POST">
-  <div class="two fields">
+  <div class="four fields">
     <div class="field">
-      <label for="title">Title</label>
+      <label>Title</label>
       <input type="text" name="title" autofocus required title = "Please include a valid Title"
       placeholder="Title">
     </div>
     <div class="field">
-      <label for="artist">Artist</label>
+      <label>Artist</label>
       <input type="text" name="artist" required title = "Please include a valid Artist"
       placeholder="Artist"  >
     </div>
     <div class="field">
-      <label for="genre">Genre</label>
-      <select name="genre" id="genre">
-          <option value ="Classical">Classical</option>
-          <option value ="Rock">Rock</option>
-          <option value ="Pop">Pop</option>
-          <option value ="Disco">Disco</option>
-          <option value ="Soul">Soul</option>
-      </select>
+      <label>Genre</label>
+      <input type="text" name="genre" required title = "Please include a valid Genre"
+      placeholder="Genre"  >
     </div>
     <div class="field">
-      <label for="duration">Duration</label>
-      <input type="number" name="duration" required title = "Please include a valid duration"
+      <label>Duration</label>
+      <input type="text" name="duration" required title = "Please include a valid duration"
       placeholder="Duration"  >
     </div>
   </div>

@@ -1,66 +1,109 @@
 {{> menu}}
 
 <section class="ui two column grid segment">
-     <div class="ui column">
-          <h1 class="ui header">
-            Welcome to the Playlist App, {{fullname}}!
-          </h1>
-            <p>
-              This app will allow users to create and maintain a collection of playlists.
-            </p>
-            <div class="buttons">
-              <button class="ui blue button">
-                Read more <i class="arrow circle right icon"></i>
-              </button>
-              <button class="ui green button">
-                Like it? <i class="thumbs up icon"></i>
-              </button>
-              <button class="ui red button">
-                Who are you? <i class="user icon"></i>
-              </button>
-            </div>
-          <div id="readmore" class="ui message">
-            <p>
-              Over the coming months, we will add CRUD (Create, Read, Update, and Delete) functionality to this app. Users will also be able to create an account, log in, and upload images to the app.
-            </p>  
-          </div>
-          <div id="welcomeuser" class="ui message"> </div>
-       <div class="ui divider"></div>
-
-      <h3 class="ui center aligned header">The Playlist App now contains:</h3>
-      <div class="ui two statistics">
-          <div class="ui huge statistic">
-              <div class="value">
-                  {{totalPlaylists}}
-              </div>
-              <div class="label">
-                  Playlists
-              </div>
-          </div>
-          <div class="ui huge statistic">
-              <div class="value">
-                  {{totalSongs}}
-              </div>
-              <div class="label">
-                  Songs
-              </div>
-          </div>
+  <div class="ui column">
+    <h2>Welcome to the Playlist App, {{fullname}}!</h2>
+      <p>
+        This app will allow users to create and maintain a collection of playlists.
+      </p>
+      <div class="buttons">
+        <button class="ui blue button" onclick="showHide()">
+          Read more <i class="arrow circle right icon"></i>
+        </button>
+        <button class="ui green button" onclick="alert('Thanks! You\'re okay too')">
+          Like it? <i class="thumbs up icon"></i>
+        </button>
+        <button class="ui red button" onclick="welcomeUser()">
+          Who are you? <i class="user icon"></i>
+        </button>
       </div>
+
+      <div id="readmore" class="ui message">
+        <p>
+          Over the coming months, we will add CRUD (Create, Read, Update, and Delete) functionality to this app. Users will also be able to create an account, log in, and upload images to the app.
+        </p>  
+      </div>
+      <div id="welcomeuser" class="ui message" onclick="hideWelcome()"> </div>
+  <div class="ui divider"></div>
+
+<h3 class="ui center aligned header">The Playlist App now contains:</h3>
+      <div class="ui small statistics">
+        <div class="ui  green statistic">
+          <div class="value">
+            <i class="file audio icon"></i> 
+          </div>
+          <div class="label">
+            {{totalPlaylists}} Playlists
+          </div>
         </div>
+        <div class="ui  blue statistic">
+          <div class="value">
+            <i class="music icon"></i> 
+          </div>
+          <div class="label">
+           {{totalSongs}} Songs
+          </div>
+        </div>
+        <div class="ui  yellow statistic">
+          <div class="value">
+            <i class="chart line icon"></i> 
+          </div>
+          <div class="label">
+            Average Number of Songs {{average}} 
+          </div>
+        </div>
+          
+      </div>
+
+  
+     <div id = "tablestats" class="ui tiny statistics">
+      <div class="ui red statistic">
+        <div class="label">
+            Playlist with most Songs
+        </div>
+        <div class="text value">
+            {{largest}}
+        </div>
+
+    </div>
+          <div class="ui blue statistic">
+        
+        <div class="label">
+            Playlist with least Songs
+        </div>
+        <div class="text value">
+            {{smallest}}
+        </div>
+    </div>
+</div>
+
+  </div>
   <div class="ui column">
     <div class="ui grid">
       <div class="ui eight wide column">
-        <img class="ui small circular image" src="https://cdn.glitch.com/9ba7382f-fb82-4a5a-a4a0-a8e03177a6b9%2F61H-3pL9ysL.jpg?1554809011078">
-      </div>
-      <div class="ui eight wide column">
-        <img class="ui small circular image" src="https://cdn.glitch.com/9ba7382f-fb82-4a5a-a4a0-a8e03177a6b9%2Feacc2030.jpg?1554808740160">
-      </div>
-      <div class="ui eight wide column">
-        <img class="ui small circular image" src="https://cdn.glitch.com/9ba7382f-fb82-4a5a-a4a0-a8e03177a6b9%2F1200x630bb.jpg?1554808932348">
-      </div>
-      <div class="ui eight wide column">
-        <img class="ui small circular image" src="https://cdn.glitch.com/9ba7382f-fb82-4a5a-a4a0-a8e03177a6b9%2FCS425161-01A-BIG.jpg?1554808740840">
-      </div>
+              <img
+                class="ui small circular image"
+                src="https://cdn.glitch.global/d125ee28-b2c1-4cab-aeac-3758a29c431b/u2.jpg?v=1642030604771"
+              />
+            </div>
+            <div class="ui eight wide column">
+              <img
+                class="ui small circular image"
+                src="https://cdn.glitch.global/d125ee28-b2c1-4cab-aeac-3758a29c431b/queen.jpg?v=1642031108270"
+              />
+            </div>
+            <div class="ui eight wide column">
+              <img
+                class="ui small circular image"
+                src="https://cdn.glitch.global/d125ee28-b2c1-4cab-aeac-3758a29c431b/coldplay.jpg?v=1642031112754"
+              />
+            </div>
+            <div class="ui eight wide column">
+              <img
+                class="ui small circular image"
+                src="https://cdn.glitch.global/d125ee28-b2c1-4cab-aeac-3758a29c431b/script.jpg?v=1642031104042"
+              />
+            </div>
     </div>
   </div>
 </section>

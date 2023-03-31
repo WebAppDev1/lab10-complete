@@ -1,13 +1,8 @@
-{{#unless playlist.songs}}
-  <h3 class="ui center aligned message">It's very quiet in here... start adding some songs!</h3>
-{{/unless}}
-
-{{#if playlist.songs}}
-<table class="ui striped table">
+<table class="ui fixed striped table">
   <thead>
     <tr>
-      <th class="three wide">Song</th>
-      <th class="three wide">Artist</th>
+      <th class="four wide">Song</th>
+      <th class="four wide">Artist</th>
       <th class="three wide">Genre</th>
       <th class="three wide">Duration</th>
       <th class="one wide"> </th>
@@ -29,12 +24,9 @@
         </span>
       </td>
       <td class="field">
-          <span class="ui input">
-            <select name="genre" id="genre" style="padding:.6em 2.5em; border:solid lightgray 1px;border-radius:5px;">
-              <option value="{{genre}}" selected="selected">{{genre}}</option>
-              {{{populate genre}}}       
-            </select>       
-          </span>
+        <span class="ui input">
+          <input type="text" name="genre" autofocus required title = "Please include a valid Genre" placeholder="Genre" value = "{{genre}}">         
+        </span>
       </td>
       <td class="field">
         <span class="ui input">
@@ -62,4 +54,3 @@
 <button class="ui blue button" id="rateit">
   Rate it! <i class="star icon"></i>
 </button>
-{{/if}}
