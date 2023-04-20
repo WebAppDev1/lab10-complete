@@ -1,8 +1,13 @@
-<table class="ui fixed striped table">
+{{#unless playlist.songs}}
+  <h3 class="ui center aligned message">It's very quiet in here... start adding some songs!</h3>
+{{/unless}}
+
+{{#if playlist.songs}}
+<table class="ui striped table">
   <thead>
     <tr>
-      <th class="four wide">Song</th>
-      <th class="four wide">Artist</th>
+      <th class="three wide">Song</th>
+      <th class="three wide">Artist</th>
       <th class="three wide">Genre</th>
       <th class="three wide">Duration</th>
       <th class="one wide"> </th>
@@ -54,3 +59,4 @@
 <button class="ui blue button" id="rateit">
   Rate it! <i class="star icon"></i>
 </button>
+{{/if}}

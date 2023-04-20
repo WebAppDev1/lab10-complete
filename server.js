@@ -21,8 +21,9 @@ app.use(fileUpload({
 }));
 
 // use handlebars as view engine
-const handlebars = exphbs.create({ extname: ".hbs" ,
-   helpers: {
+const handlebars = exphbs.create({ 
+  extname: ".hbs",
+helpers: {
      
       uppercase: (inputString) => {
         return inputString.toUpperCase();
@@ -43,7 +44,6 @@ const handlebars = exphbs.create({ extname: ".hbs" ,
 });
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
-
 
 // import routes file and use this for routing
 import routes from "./routes.js";

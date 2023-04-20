@@ -1,30 +1,33 @@
 {
   "playlistCollection": [
     {
-      "id": "afd70b65-32cf-4e29-a814-191700ab76d3",
-      "title": "test",
-      "duration": "12",
-      "songs": []
-    },
-    {
-      "id": "5fba3053-c159-4259-b63a-24fcb22d9b45",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "title": "New Playlist",
-      "picture": "http://res.cloudinary.com/web-app-dev-1/image/upload/v1680098867/d1wgivcc3vxm21c4v7fx.jpg",
-      "date": "2023-03-29T14:07:47.215Z",
+      "id": "d56bf68c-0205-4987-9576-fd48e1eee4cb",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Test",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1679413175/udcmz4mjtlhubgrvhhe2.jpg",
+      "date": "2023-03-21T15:39:34.833Z",
       "songs": [
         {
-          "id": "f7b1be08-dde3-4d22-871f-8085048fadc0",
-          "title": "Beautiful Day",
-          "artist": "U2",
+          "id": "55573d24-98d0-4cfc-8699-d4356ca776a6",
+          "title": "test",
+          "artist": "test",
           "genre": "Rock",
-          "duration": "3.5"
-        },
+          "duration": "18"
+        }
+      ]
+    },
+    {
+      "id": "226e5d14-52b2-421f-9378-506723fdc755",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Test 2",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1679664130/ydezbrahi2tqc0g8ajyy.jpg",
+      "date": "2023-03-24T13:22:10.670Z",
+      "songs": [
         {
-          "id": "2c6141f3-d3bb-4051-a54d-9845015126fa",
-          "title": "Bohemian Rhapsody",
-          "artist": "Queen",
-          "genre": "Rock",
+          "id": "760c8a3a-bced-4ccb-95a8-6901130126fc",
+          "title": "Test",
+          "artist": "Test artist",
+          "genre": "Pop",
           "duration": "5"
         }
       ]

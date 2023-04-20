@@ -2,7 +2,6 @@
 
 import logger from '../utils/logger.js';
 import JsonStore from './json-store.js';
-
 import cloudinary from 'cloudinary';
 
 import { createRequire } from "module";
@@ -22,66 +21,58 @@ const playlistStore = {
   store: new JsonStore('./models/playlist-store.json', { playlistCollection: [] }),
   collection: 'playlistCollection',
 
-  //updated
   getAllPlaylists() {
     return this.store.findAll(this.collection);
   },
-
-  //updated
+  
   getPlaylist(id) {
     return this.store.findOneBy(this.collection, (collection => collection.id === id));
   },
-
-  //updated
+  
   removeSong(id, songId) {
     const arrayName = "songs";
     this.store.removeItem(this.collection, id, arrayName, songId);
   },
-
-  //updated
+  
   removePlaylist(id) {
     const playlist = this.getPlaylist(id);
     this.store.removeCollection(this.collection, playlist);
   },
-
-  //added
+  
   removeAllPlaylists() {
     this.store.removeAll(this.collection);
   },
-
-  //updated
+  
   async addPlaylist(playlist, response) {
-  function uploader(){
-    return new Promise(function(resolve, reject) {  
-      cloudinary.uploader.upload(playlist.picture.tempFilePath,function(result,err){
-        if(err){console.log(err);}
-        resolve(result);
+    function uploader(){ 
+      return new Promise(function(resolve, reject) {  
+        cloudinary.uploader.upload(playlist.picture.tempFilePath,function(result,err){
+          if(err){console.log(err);}
+          resolve(result);
+        });
       });
-    });
-  }
-  let result = await uploader();
-  logger.info('cloudinary result', result);
-  playlist.picture = result.url;
-
-  this.store.addCollection(this.collection, playlist);
-  response();
-},
-
-  //updated
+    } 
+    let result = await uploader();
+    logger.info('cloudinary result', result);
+    playlist.picture = result.url;
+      
+    this.store.addCollection(this.collection, playlist);
+    response();
+  },
+  
   addSong(id, song) {
     const arrayName = "songs";
     this.store.addItem(this.collection, id, arrayName, song);
   },
   
-  editSong(id, songId, updatedSong)  {
-      const arrayName = "songs";
-      this.store.editItem(this.collection, id, songId, arrayName, updatedSong)
+  editSong(id, songId, updatedSong) {
+    const arrayName = "songs";
+    this.store.editItem(this.collection, id, songId, arrayName, updatedSong);
   },
   
   getUserPlaylists(userid) {
     return this.store.findBy(this.collection, (playlist => playlist.userid === userid));
   },
-
 
 };
 

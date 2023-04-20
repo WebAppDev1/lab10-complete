@@ -5,7 +5,6 @@
       "lastName": "simpson",
       "email": "homer@simpson.com",
       "password": "secret",
-      "picture": "https://res.cloudinary.com/web-app-dev-1/image/upload/v1648551677/tyzsjsrcyhfnyehtjr0v.jpg",
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
     },
     {
@@ -13,17 +12,7 @@
       "lastName": "simpson",
       "email": "marge@simpson.com",
       "password": "secret",
-      "picture": "https://res.cloudinary.com/web-app-dev-1/image/upload/v1648456157/inht7towwtepo41w0ukz.png",
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
-    },
-    
-    {
-      "firstName": "Mary",
-      "lastName": "Lyng",
-      "email": "mlyng@wit.ie",
-      "password": "Trustno1",
-      "picture": "http://res.cloudinary.com/web-app-dev-1/image/upload/v1679525829/nbupykjn67m4bxeyce9b.jpg",
-      "id": "110a155f-c49d-4254-875e-2a5b7a9dc893"
     }
   ]
 }
