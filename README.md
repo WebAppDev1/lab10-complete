@@ -1,11 +1,8 @@
-# Lab 10
+Lab 10
+=================
 
-
-- Unless Helper
-- Custom Helpers
-
-
-
-
-
-## Note: after importing this solution, you will need to include a Cloudinary credentials file
+- Added Handlebars helpers
+- Custom helper - uppercase
+- Added timestamps to playlists
+- Custom helper - formatDate
+- Select genres custom helper
